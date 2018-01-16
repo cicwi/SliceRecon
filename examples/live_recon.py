@@ -83,6 +83,8 @@ def main():
     #  - flat field
     #  - linearize
     def projection_callback(proj_shape, proj_data, proj_id):
+        global dark
+        global flat
         # TODO: START RECONSTRUCTING SLICES WHEN
         # TODO: AFTER ENOUGH NEW PROJECTIONS, REDO ALL CURRENT SLICES
         if proj_id == -1:
@@ -90,8 +92,9 @@ def main():
         elif proj_id == -2:
             dark = np.reshape(proj_data, proj_shape)
         else:
-            proj = (proj - dark) / (flat - dark)
-            proj = -np.log(proj)
+            if dark and flat:
+                proj = (proj_data - dark) / (flat - dark)
+                proj = -np.log(proj)
             astra.upload_projection(sin_id, proj_id, proj, filt=True)
 
 
