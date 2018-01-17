@@ -47,6 +47,8 @@ vol_geom = flex.data.astra_vol_geom(
     meta['geometry'], vol.shape,  proj.shape[::2])
 proj_geom = flex.data.astra_proj_geom(meta['geometry'], proj.shape[::2])
 original_vectors = proj_geom['Vectors'].copy()
+print('vol_geom', vol_geom)
+print('vec', original_vectors[0])
 
 slre.util.prescale_and_filter(original_vectors, proj)
 
