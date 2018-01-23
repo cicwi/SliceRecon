@@ -1,0 +1,6 @@
+[submodule "slicerecon/cpp/ext/bulk"]
+	path = slicerecon/cpp/ext/bulk
+	url = https://www.github.com/jwbuurlage/bulk.git
+[submodule "ext/pybind"]
+	path = ext/pybind
+	url = https://github.com/pybind/pybind11.git
