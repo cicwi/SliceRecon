@@ -24,6 +24,7 @@ struct settings {
     int32_t flats;
     bool already_linear;
     bool retrieve_phase;
+    bool tilt_axis;
     paganin_settings paganin;
 };
 
