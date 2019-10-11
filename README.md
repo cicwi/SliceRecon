@@ -19,6 +19,19 @@ Dependencies
 If optional dependencies are not found using CMake's `find_package`, they will
 be cloned as a git submodule and built from source.
 
+To build SliceRecon follow the steps below:
+
+1) Clone the SliceRecon git by running: ```git clone https://github.com/cicwi/SliceRecon.git/```
+2) Run: ```cd SliceRecon```
+3) Run: ```conda env create --force -f build_environment.yml```
+4) Run: ```conda activate slicerecon_build```
+5) Run: ```git submodule update --init --recursive```
+6) Run: ```mkdir build```
+7) Run: ```cd build```
+8) Run: ```CMAKE_PREFIX_PATH=$CONDA_PREFIX cmake ..```
+9) Run: ```make -j8```
+
+
 ### C++
 
 Building the reference server, and example data adapters:
