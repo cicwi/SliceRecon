@@ -5,6 +5,7 @@ include(FindPkgConfig)
 set(TARGET_NAME "slicerecon")
 project(slicerecon)
 
+#TODO: check for fftw
 # --------------------------------------------------------------------------------------------
 # GLM
 

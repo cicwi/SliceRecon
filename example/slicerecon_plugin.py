@@ -6,8 +6,8 @@ def callback(shape, xs, idx):
     xs = np.array(xs).reshape(shape)
 
     print("callback called", shape)
-    xs[xs <= 3.0] = 0.0
-    xs[xs > 3.0] = 10.0
+    xs[xs <= 0.5] = 0.0
+    xs[xs > 0.5] = 10.0
 
     return [shape, xs.ravel().tolist()]
 
