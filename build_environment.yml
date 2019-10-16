@@ -1,0 +1,20 @@
+name: slicerecon_build
+channels:
+- defaults
+- astra-toolbox/label/dev
+- cicwi
+- conda-forge
+dependencies:
+- cmake
+- make
+- gxx_linux-64
+- boost-cpp
+- pybind11
+- zeromq
+- tomopackets
+- eigen
+- python=3.7
+- astra-toolbox
+- glm
+- pkg-config
+- fftw
